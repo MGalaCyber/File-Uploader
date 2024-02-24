@@ -1,0 +1,32 @@
+{
+  "name": "@mgalacyber/file-uploader",
+  "version": "1.0.0",
+  "description": "File uploader to URL using Universe API",
+  "main": "index.js",
+  "typings": "typings/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MGalaCyber/file-uploader.git"
+  },
+  "keywords": [
+    "file-uploader",
+    "server-uploader",
+    "uploader",
+    "upload"
+  ],
+  "author": "MGalaCyber",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/MGalaCyber/file-uploader/issues"
+  },
+  "homepage": "https://api.universebot.space",
+  "dependencies": {
+    "@mgalacyber/package-notifier": "^1.0.1",
+    "file-type": "^16.5.3",
+    "form-data": "^4.0.0",
+    "node-fetch": "^3.3.2"
+  }
+}
