@@ -1,30 +1,22 @@
-const Fetch = (...args) => import("node-fetch").then(({ default: fetch }) => fetch(...args));
-const { fromBuffer } = require("file-type");
-const FormData = require("form-data");
+const axios = require('axios');
+const FormData = require('form-data');
+const { fromBuffer } = require('file-type');
 
 async function fileUploader(file) {
-    let formData = new FormData();
+    let form = new FormData();
     const { ext } = await fromBuffer(file);
+    form.append('file', file, 'tmp.' + ext);
 
-    formData.append("file", file, "tmp." + ext);
-
-    let getResponse = await Fetch("https://api.universebot.space/upload/add", {
-        method: "POST",
-        body: formData
+    return axios.post('https://cdn.universebot.space/api/upload', form, {
+        headers: form.getHeaders()
+    })
+    .then(response => {
+        let result = response.data;
+        return result;
+    })
+    .catch(error => {
+        return error;
     });
-    let getResult = await getResponse.json();
-
-    if (getResult.status) {
-        return {
-            message: getResult.message,
-            url: getResult.data.url
-        }
-    } else {
-        return {
-            message: getResult.message,
-            url: null
-        }
-    }
 };
 
 module.exports = fileUploader;

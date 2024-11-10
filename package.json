@@ -1,7 +1,7 @@
 {
   "name": "@mgalacyber/file-uploader",
-  "version": "1.0.0",
-  "description": "File uploader to URL using Universe API",
+  "version": "1.1.0",
+  "description": "File uploader to URL using Universe CDN",
   "main": "index.js",
   "typings": "typings/index.d.ts",
   "scripts": {
@@ -25,8 +25,8 @@
   "homepage": "https://api.universebot.space",
   "dependencies": {
     "@mgalacyber/package-notifier": "^1.0.1",
+    "axios": "^1.7.7",
     "file-type": "^16.5.3",
-    "form-data": "^4.0.0",
-    "node-fetch": "^3.3.2"
+    "form-data": "^4.0.0"
   }
 }

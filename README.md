@@ -15,7 +15,7 @@ This NPM package, file-uploader, is a versatile and efficient solution for handl
     - The file-uploader is designed to support all types of files. Whether it's images, documents, audio, or any other file format, the package seamlessly handles the upload process, providing a versatile solution for a wide range of applications.
 
 ## How It Works
-The file-uploader is powered by the [Universe API](https://api.universebot.space), which provides a reliable backend infrastructure for handling file uploads.
+The file-uploader is powered by the [Universe CDN](https://cdn.universebot.space), which provides a reliable backend infrastructure for handling file uploads.
 
 ## Installation
 npm:
